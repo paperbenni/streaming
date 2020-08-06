@@ -1,0 +1,20 @@
+#!/bin/bash
+#instantosarg
+# instantOS quickmenu script
+
+[ -e ~/tutorial ] || mkdir ~/tutorial
+[ -e ~/stream ] || mkdir ~/stream
+{ 
+	st -e bash -c "nvim ~/tutorial/$1"
+	sent ~/tutorial/"$1"
+}
+
+echo "$1" > ~/stream/tutorial.txt
+
+if ! pgrep obs
+then
+	obs &
+	sleep 4
+fi
+
+obs-cli switch-scene tutorialintro

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+obshide() {
+	echo "hiding $1"
+	obs-cli hide-sceneitem tutorialintro "$1" || exit 
+}
+
+obsshow() {
+	echo "showing $1"
+	obs-cli show-sceneitem tutorialintro "$1" || exit
+}
+
+
+obsshow instantwallpaper
+obsshow wipe
+sleep 0.5
+obs-cli switch-scene desktop
+sleep 0.3
+obshide instantwallpaper
+sleep 2
+obshide wipe
+obsshow instantwallpaper
