@@ -8,7 +8,7 @@
 {
 	st -e bash -c 'nvim ~/tutorial/"'"$1"'"'
 	sent ~/tutorial/"$1"
-}
+} &
 
 echo "$1" >~/stream/tutorial.txt
 

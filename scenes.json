@@ -517,14 +517,14 @@
                         "locked": false,
                         "name": "darktext",
                         "pos": {
-                            "x": 326.0,
-                            "y": 457.0
+                            "x": -2.0,
+                            "y": 474.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 2.3568966388702393,
-                            "y": 2.3576922416687012
+                            "x": 2.25,
+                            "y": 2.25
                         },
                         "scale_filter": "disable",
                         "visible": true
