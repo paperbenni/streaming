@@ -156,10 +156,10 @@
             "name": "loading"
         },
         {
-            "name": "desktop"
+            "name": "messages"
         },
         {
-            "name": "messages"
+            "name": "desktop"
         },
         {
             "name": "overlay"
@@ -169,6 +169,82 @@
         }
     ],
     "sources": [
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_ft2_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "darktext",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color1": 4283647294,
+                "color2": 4283647294,
+                "custom_width": 0,
+                "drop_shadow": false,
+                "font": {
+                    "face": "Visby Round CF Extra Bold",
+                    "flags": 0,
+                    "size": 256,
+                    "style": "Regular"
+                },
+                "from_file": false,
+                "log_mode": false,
+                "outline": false,
+                "source": "warm",
+                "text": "docs",
+                "text_file": "/home/benjamin/stream/tutorial.txt",
+                "word_wrap": false
+            },
+            "sync": 0,
+            "versioned_id": "text_ft2_source_v2",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "MediaSource.Pause": [],
+                "MediaSource.Play": [],
+                "MediaSource.Restart": [],
+                "MediaSource.Stop": [],
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "ffmpeg_source",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "wipe",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "clear_on_media_end": true,
+                "local_file": "/home/benjamin/workspace/instantLOGO/streams/wipe.webm"
+            },
+            "sync": 0,
+            "versioned_id": "ffmpeg_source",
+            "volume": 1.0
+        },
         {
             "balance": 0.5,
             "deinterlace_field_order": 0,
@@ -310,13 +386,17 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.background": [],
+                "libobs.hide_scene_item.darktext": [],
                 "libobs.hide_scene_item.instantostext": [],
                 "libobs.hide_scene_item.instantwallpaper": [],
                 "libobs.hide_scene_item.tutorialtext": [],
+                "libobs.hide_scene_item.wipe": [],
                 "libobs.show_scene_item.background": [],
+                "libobs.show_scene_item.darktext": [],
                 "libobs.show_scene_item.instantostext": [],
                 "libobs.show_scene_item.instantwallpaper": [],
-                "libobs.show_scene_item.tutorialtext": []
+                "libobs.show_scene_item.tutorialtext": [],
+                "libobs.show_scene_item.wipe": []
             },
             "id": "scene",
             "mixers": 0,
@@ -331,7 +411,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 4,
+                "id_counter": 6,
                 "items": [
                     {
                         "align": 5,
@@ -346,12 +426,41 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "background",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 222,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
                         "id": 4,
                         "locked": false,
                         "name": "instantwallpaper",
                         "pos": {
                             "x": 0.0,
-                            "y": -278.0
+                            "y": -236.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -373,20 +482,49 @@
                         "crop_bottom": 0,
                         "crop_left": 0,
                         "crop_right": 0,
-                        "crop_top": 545,
+                        "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 1,
+                        "id": 5,
                         "locked": false,
-                        "name": "background",
+                        "name": "wipe",
                         "pos": {
                             "x": 0.0,
-                            "y": 545.0
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
                             "x": 1.0,
                             "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": false,
+                        "name": "darktext",
+                        "pos": {
+                            "x": 326.0,
+                            "y": 457.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 2.3568966388702393,
+                            "y": 2.3576922416687012
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -408,8 +546,8 @@
                         "locked": false,
                         "name": "tutorialtext",
                         "pos": {
-                            "x": 158.0,
-                            "y": 802.0
+                            "x": 154.0,
+                            "y": 830.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -437,14 +575,14 @@
                         "locked": false,
                         "name": "instantostext",
                         "pos": {
-                            "x": 155.0,
-                            "y": 622.0
+                            "x": 147.0,
+                            "y": 643.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.69274652004241943,
-                            "y": 0.69230771064758301
+                            "x": 0.71882641315460205,
+                            "y": 0.7192307710647583
                         },
                         "scale_filter": "disable",
                         "visible": true

@@ -2,14 +2,13 @@
 
 obshide() {
 	echo "hiding $1"
-	obs-cli hide-sceneitem tutorialintro "$1" || exit 
+	obs-cli hide-sceneitem tutorialintro "$1" || exit
 }
 
 obsshow() {
 	echo "showing $1"
 	obs-cli show-sceneitem tutorialintro "$1" || exit
 }
-
 
 obsshow instantwallpaper
 obsshow wipe
