@@ -73,7 +73,7 @@
         "push-to-talk": false,
         "push-to-talk-delay": 0,
         "settings": {
-            "device_id": "default"
+            "device_id": "alsa_input.usb-BLUE_MICROPHONE_Blue_Snowball_201305-00.analog-stereo"
         },
         "sync": 0,
         "versioned_id": "pulse_input_capture",
@@ -107,10 +107,10 @@
         },
         "sync": 0,
         "versioned_id": "pulse_output_capture",
-        "volume": 1.0
+        "volume": 0.0
     },
-    "current_program_scene": "tutorialintro",
-    "current_scene": "tutorialintro",
+    "current_program_scene": "messages",
+    "current_scene": "messages",
     "current_transition": "Stinger",
     "groups": [],
     "modules": {
@@ -174,6 +174,74 @@
             "deinterlace_field_order": 0,
             "deinterlace_mode": 0,
             "enabled": true,
+            "filters": [
+                {
+                    "balance": 0.5,
+                    "deinterlace_field_order": 0,
+                    "deinterlace_mode": 0,
+                    "enabled": false,
+                    "flags": 0,
+                    "hotkeys": {},
+                    "id": "scroll_filter",
+                    "mixers": 0,
+                    "monitoring_type": 0,
+                    "muted": false,
+                    "name": "Bewegung",
+                    "prev_ver": 419430408,
+                    "private_settings": {},
+                    "push-to-mute": false,
+                    "push-to-mute-delay": 0,
+                    "push-to-talk": false,
+                    "push-to-talk-delay": 0,
+                    "settings": {
+                        "speed_x": 500.0
+                    },
+                    "sync": 0,
+                    "versioned_id": "scroll_filter",
+                    "volume": 1.0
+                }
+            ],
+            "flags": 0,
+            "hotkeys": {},
+            "id": "text_ft2_source",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "warm 2",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "color1": 4294967295,
+                "color2": 4294967295,
+                "custom_width": 0,
+                "drop_shadow": false,
+                "font": {
+                    "face": "Visby Round CF Extra Bold",
+                    "flags": 0,
+                    "size": 256,
+                    "style": "Regular"
+                },
+                "from_file": false,
+                "log_mode": false,
+                "outline": false,
+                "source": "warm",
+                "text": "this is my first week using vim please help me with it",
+                "text_file": "/home/benjamin/stream.txt",
+                "word_wrap": false
+            },
+            "sync": 0,
+            "versioned_id": "text_ft2_source_v2",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
             "flags": 0,
             "hotkeys": {},
             "id": "text_ft2_source",
@@ -202,7 +270,7 @@
                 "log_mode": false,
                 "outline": false,
                 "source": "warm",
-                "text": "docs",
+                "text": "vdocs",
                 "text_file": "/home/benjamin/stream/tutorial.txt",
                 "word_wrap": false
             },
@@ -683,7 +751,7 @@
                             "y": 1.0
                         },
                         "scale_filter": "disable",
-                        "visible": false
+                        "visible": true
                     },
                     {
                         "align": 5,
@@ -741,7 +809,7 @@
                             "y": 0.1428571492433548
                         },
                         "scale_filter": "disable",
-                        "visible": false
+                        "visible": true
                     },
                     {
                         "align": 5,
@@ -760,17 +828,17 @@
                         "locked": false,
                         "name": "messagetitle",
                         "pos": {
-                            "x": 647.0,
-                            "y": 831.0
+                            "x": 646.0,
+                            "y": 839.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.34488067030906677,
-                            "y": 0.34496122598648071
+                            "x": 0.27512997388839722,
+                            "y": 0.27491408586502075
                         },
                         "scale_filter": "disable",
-                        "visible": false
+                        "visible": true
                     }
                 ]
             },
@@ -1057,8 +1125,8 @@
                         "locked": false,
                         "name": "warm",
                         "pos": {
-                            "x": 105.0,
-                            "y": 817.0
+                            "x": 262.0,
+                            "y": 835.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -1315,9 +1383,11 @@
                 "libobs.hide_scene_item.desktop": [],
                 "libobs.hide_scene_item.loading": [],
                 "libobs.hide_scene_item.overlay": [],
+                "libobs.hide_scene_item.warm 2": [],
                 "libobs.show_scene_item.desktop": [],
                 "libobs.show_scene_item.loading": [],
-                "libobs.show_scene_item.overlay": []
+                "libobs.show_scene_item.overlay": [],
+                "libobs.show_scene_item.warm 2": []
             },
             "id": "scene",
             "mixers": 0,
@@ -1332,7 +1402,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 9,
+                "id_counter": 10,
                 "items": [
                     {
                         "align": 5,
@@ -1420,6 +1490,35 @@
                         },
                         "scale_filter": "disable",
                         "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 10,
+                        "locked": false,
+                        "name": "warm 2",
+                        "pos": {
+                            "x": 380.0,
+                            "y": 1008.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.17412786185741425,
+                            "y": 0.17419354617595673
+                        },
+                        "scale_filter": "disable",
+                        "visible": false
                     }
                 ]
             },

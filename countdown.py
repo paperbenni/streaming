@@ -4,7 +4,7 @@ import datetime
 import time
 import os
 
-future = datetime.datetime(2020, 8, 18, 18, 0, 0)
+future = datetime.datetime(2020, 9, 15, 18, 15, 0)
 
 while True:
     present = datetime.datetime.now()
