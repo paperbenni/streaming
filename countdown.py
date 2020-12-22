@@ -3,8 +3,14 @@
 import datetime
 import time
 import os
+import sys
 
-future = datetime.datetime(2020, 9, 15, 18, 15, 0)
+
+if len(sys.argv) < 3:
+    print('nope')
+    exit(1)
+
+future = datetime.datetime.now().replace(hour=int(sys.argv[1]), minute=int(sys.argv[2]))
 
 while True:
     present = datetime.datetime.now()
