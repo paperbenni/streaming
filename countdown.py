@@ -15,8 +15,11 @@ future = datetime.datetime.now().replace(hour=int(sys.argv[1]), minute=int(sys.a
 while True:
     present = datetime.datetime.now()
     difference = future - present
-    countdown = time.strftime('%H:%M:%S', time.gmtime(difference.seconds))
+    if difference.seconds > 0 and difference.seconds < 43200:
+        countdown = time.strftime('%H:%M:%S', time.gmtime(difference.seconds))
+    else:
+        countdown = "loading..."
     print(countdown)
-    os.system("echo 'stream starting in " + countdown + "' > ~/stream.txt")
+    os.system("echo '" + countdown + "' > ~/stream.txt")
     time.sleep(1)
 
