@@ -12,3 +12,6 @@ sed -i '/wikilistmarker/s/.*/let g:vimwiki_list = [wiki, streamwiki] " wikilistm
 
 
 echo "stopped paperbenni stream"
+
+mpc volume 40
+mpc pause

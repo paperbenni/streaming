@@ -21,20 +21,30 @@ echo "enter stream title"
 # TODO apply date and title to youtube/twitch
 
 # switch wiki to public one
+echo "switching wiki to public wiki"
 sed -i '/wikilistmarker/s/.*/let g:vimwiki_list = [streamwiki, wiki] " wikilistmarker/' ~/.config/nvim/init.vim
 
-# TODO start music stuff
+# set up background music
+mpc volume 100
+mpc random on
+mpc consume off
+mpc repeat on
+mpc load stream-intro
+mpc play
 
 # start OBS
-
 if ! pgrep obs
 then
     obs &
 fi
 
-# TODO set microphone source to mute
 # TODO set destkop audio source as active
+# TODO set OBS microphone source to mute
+# TODO set OBS scene to welcome screen
 
+# TODO start countdown loop
+
+# TODO interaction reminder loop
 
 brave https://dashboard.twitch.tv/u/paperbenni/stream-manager
 brave https://studio.youtube.com/video/FJtcDT_6PNM/livestreaming
