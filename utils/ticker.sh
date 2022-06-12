@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# DEPRECATED, rework with newer message features
+
 die() {
     notify-send "streamticker crashed: $1"
     echo "$1"
