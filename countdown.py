@@ -17,6 +17,6 @@ while True:
     difference = future - present
     countdown = time.strftime('%H:%M:%S', time.gmtime(difference.seconds))
     print(countdown)
-    os.system("echo 'stream starting in " + countdown + "' > ~/stream.txt")
+    os.system("echo '" + countdown + "' > ~/stream.txt")
     time.sleep(1)
 
