@@ -17,6 +17,11 @@ them public through yadm
 ./endstream.sh
 ```
 
+## Dependencies
+
+My Stream assets
+inter-fonts package
+
 ## Disclaimer
 
 This is **highly** specific to my setup. It relies on my dotfiles,
