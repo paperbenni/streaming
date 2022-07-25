@@ -33,9 +33,12 @@ mpc load stream-intro
 mpc play
 
 # start OBS
-if ! pgrep obs
-then
+if ! pgrep obs; then
     obs &
+fi
+
+if ! pgrep easyeffects; then
+    easyeffects --gapplication-service &
 fi
 
 # TODO set destkop audio source as active
