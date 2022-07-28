@@ -3,16 +3,43 @@
 echo "paperbenni stream assistant"
 echo ""
 
+doxxwarning() {
+    if pgrep "$1"; then
+        echo "please close $1, you don't wanna dox yourself"
+        exit 1
+    fi
+}
+
+doxxwarning thunderbird
+doxxwarning signal-desktop
+doxxwarning signal-desktop
+doxxwarning mattermost-desk
+
+if pgrep -f '/usr/lib/obsidian/app.asar'; then
+    echo "please close obsidian, you don't wanna dox yourself"
+    exit 1
+fi
+
 command -v obs || instantinstall obs-studio-git
 instantinstall obs-cli
 instantinstall python
 
-#TODO
+if systemctl list-unit-files | grep enabled | grep -q mpd; then
+    echo "mpd system service found, please use mpd with --user"
+    exit 1
+fi
+
+pgrep mpd || {
+    echo "enabling mpd"
+    systemctl --user enable --now mpd.service
+    sleep 3
+}
 
 #ask for date
 echo "when is the stream starting? (format example 21:45)"
 
 echo "enter stream title"
+
 # TODO ask for title
 
 # TODO pick from premade thumbnails
@@ -32,13 +59,15 @@ mpc repeat on
 mpc load stream-intro
 mpc play
 
+if ! pgrep easyeffects; then
+    echo "starting easyeffects"
+    easyeffects --gapplication-service &
+    sleep 1
+fi
+
 # start OBS
 if ! pgrep obs; then
     obs &
-fi
-
-if ! pgrep easyeffects; then
-    easyeffects --gapplication-service &
 fi
 
 # TODO set destkop audio source as active

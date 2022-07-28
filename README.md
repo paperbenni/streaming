@@ -7,15 +7,30 @@ OBS configs are in my dotfiles repo.
 They contain a restream auth token, sadly there's no easy way to make
 them public through yadm
 
-## starting stream
+## Process of doing a stream
+
+## Start/prepare stream
+
 ```
 ./stream.sh
 ```
+
+This will put you live and put on a "stream starting" waiting card
+
+## Join stream
+
+```
+./ready.sh
+```
+
+Switch from the waiting card to desktop capture, unmute microphone, start background music
 
 ## ending stream
 ```
 ./endstream.sh
 ```
+
+Shut down stream, kill all stream related processes
 
 ## Dependencies
 
@@ -30,3 +45,4 @@ any other setup as is.
 
 Please do however feel free to copy parts of this or to be inspired
 by it. 
+
