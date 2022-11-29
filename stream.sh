@@ -12,7 +12,7 @@ doxxwarning() {
 
 doxxwarning thunderbird
 doxxwarning signal-desktop
-doxxwarning signal-desktop
+doxxwarning obsidian
 doxxwarning mattermost-desk
 
 if pgrep -f '/usr/lib/obsidian/app.asar'; then
