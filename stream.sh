@@ -12,7 +12,6 @@ doxxwarning() {
 
 doxxwarning thunderbird
 doxxwarning signal-desktop
-doxxwarning signal-desktop
 doxxwarning mattermost-desk
 
 if pgrep -f '/usr/lib/obsidian/app.asar'; then
@@ -21,8 +20,8 @@ if pgrep -f '/usr/lib/obsidian/app.asar'; then
 fi
 
 command -v obs || instantinstall obs-studio-git
-instantinstall obs-cli
 instantinstall python
+instantinstall obs-cli
 
 if systemctl list-unit-files | grep enabled | grep -q mpd; then
     echo "mpd system service found, please use mpd with --user"
@@ -46,6 +45,11 @@ echo "enter stream title"
 # TODO option "other" opens file picker
 
 # TODO apply date and title to youtube/twitch
+
+# TODO: post discord message about stream
+# TODO: tweet out stream
+
+# TODO: set obs audio source to easyeffects
 
 # switch wiki to public one
 echo "switching wiki to public wiki"
